@@ -1,0 +1,14 @@
+.custom-grid--thirds::after {
+  clear: both;
+  content: "";
+  display: block; }
+
+.custom-grid--thirds__a-single-column {
+  width: calc(33.33333% - 80px);
+  float: left;
+  margin-left: 60px; }
+
+.formItem {
+  display: block; }
+
+/*# sourceMappingURL=styles.css.map */
