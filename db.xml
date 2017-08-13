@@ -2,7 +2,7 @@
 <!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
 <!-- Active URL: http://ondras.zarovi.cz/sql/demo/?keyword=default -->
 <sql>
-<datatypes db="mysql">
+<datatypes db="postgresql">
         <group color="rgb(238,238,170)" label="Numeric">
             <type label="Integer" quote="" sql="INTEGER" length="0"/>
             <type label="TINYINT" quote="" sql="TINYINT" length="0"/>
@@ -12,13 +12,13 @@
             <type label="BIGINT" quote="" sql="BIGINT" length="0"/>
             <type label="Decimal" quote="" sql="DECIMAL" length="1" re="DEC"/>
             <type label="Single precision" quote="" sql="FLOAT" length="0"/>
-            <type label="Double precision" quote="" sql="DOUBLE" length="0" re="DOUBLE"/>
+            <type label="Double precision" quote="" sql="DOUBLE PRECISION" length="0" re="DOUBLE"/>
         </group>
 
         <group color="rgb(255,200,200)" label="Character">
             <type label="Char" quote="'" sql="CHAR" length="1"/>
             <type label="Varchar" quote="'" sql="VARCHAR" length="1"/>
-            <type label="Text" quote="'" sql="MEDIUMTEXT" length="0" re="TEXT"/>
+            <type label="Text" quote="'" sql="TEXT" length="0" re="TEXT"/>
             <type label="Binary" quote="'" sql="BINARY" length="1"/>
             <type label="Varbinary" quote="'" sql="VARBINARY" length="1"/>
             <type label="BLOB" quote="'" sql="BLOB" length="0" re="BLOB"/>
@@ -42,7 +42,7 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="name" null="0" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
+<datatype>TEXT</datatype>
 </row>
 <row name="open_date" null="0" autoincrement="0">
 <datatype>INTEGER</datatype>
@@ -88,13 +88,13 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="address" null="0" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
+<datatype>TEXT</datatype>
 </row>
 <row name="latitude" null="0" autoincrement="0">
-<datatype>DOUBLE</datatype>
+<datatype>DOUBLE PRECISION</datatype>
 </row>
 <row name="longitude" null="0" autoincrement="0">
-<datatype>DOUBLE</datatype>
+<datatype>DOUBLE PRECISION</datatype>
 </row>
 <row name="open_date" null="0" autoincrement="0">
 <datatype>INTEGER</datatype>
@@ -123,7 +123,7 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="type" null="0" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
+<datatype>TEXT</datatype>
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
@@ -134,7 +134,7 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="denomination" null="0" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
+<datatype>TEXT</datatype>
 </row>
 <row name="capacity" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
@@ -148,7 +148,7 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="country" null="0" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
+<datatype>TEXT</datatype>
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
@@ -159,7 +159,7 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="name" null="0" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
+<datatype>TEXT</datatype>
 </row>
 <row name="age" null="0" autoincrement="0">
 <datatype>INTEGER</datatype>
@@ -212,7 +212,7 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="name" null="0" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
+<datatype>TEXT</datatype>
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
@@ -223,7 +223,7 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="name" null="0" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
+<datatype>TEXT</datatype>
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
@@ -255,7 +255,7 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="content" null="0" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
+<datatype>TEXT</datatype>
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
@@ -266,7 +266,7 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="name" null="0" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
+<datatype>TEXT</datatype>
 </row>
 <row name="id_place_type" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
@@ -292,7 +292,7 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="name" null="0" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
+<datatype>TEXT</datatype>
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
@@ -304,7 +304,7 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="name" null="0" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
+<datatype>TEXT</datatype>
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
@@ -315,7 +315,7 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="name" null="1" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
+<datatype>TEXT</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
