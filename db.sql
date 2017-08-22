@@ -86,7 +86,6 @@ CREATE TABLE "review" (
 "id_place" INTEGER ,
 "id_bottle" INTEGER ,
 "id_people" INTEGER ,
-"id_field_level" INTEGER ,
 "content" TEXT NOT NULL ,
 PRIMARY KEY ("id")
 );
@@ -125,9 +124,9 @@ PRIMARY KEY ("id")
 
 CREATE TABLE "field_level" (
 "id"  SERIAL ,
+"level" DECIMAL NOT NULL ,
 "id_star_field" INTEGER ,
 "id_review" INTEGER ,
-"level" DECIMAL NOT NULL ,
 PRIMARY KEY ("id")
 );
 

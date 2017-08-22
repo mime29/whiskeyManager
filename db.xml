@@ -154,7 +154,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="1448" y="188" name="bottle">
+<table x="1447" y="188" name="bottle">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -218,7 +218,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="800" y="155" name="people">
+<table x="771" y="410" name="people">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -229,7 +229,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="1239" y="218" name="review">
+<table x="1200" y="177" name="review">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -251,9 +251,6 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="people" row="id" />
 </row>
-<row name="id_field_level" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
 <row name="content" null="0" autoincrement="0">
 <datatype>TEXT</datatype>
 </row>
@@ -310,7 +307,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="890" y="12" name="star_field">
+<table x="633" y="79" name="star_field">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -321,10 +318,13 @@
 <part>id</part>
 </key>
 </table>
-<table x="1076" y="114" name="field_level">
+<table x="876" y="91" name="field_level">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
+<row name="level" null="0" autoincrement="0">
+<datatype>DECIMAL</datatype>
+</row>
 <row name="id_star_field" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="star_field" row="id" />
@@ -332,9 +332,6 @@
 <row name="id_review" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="review" row="id" />
-</row>
-<row name="level" null="0" autoincrement="0">
-<datatype>DECIMAL</datatype>
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>

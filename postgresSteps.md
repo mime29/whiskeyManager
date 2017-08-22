@@ -8,4 +8,4 @@ postgres=# CREATE DATABASE whiskeyrocks;
 postgres=# GRANT ALL PRIVILEGES ON DATABASE whiskeyrocks TO postgres;
 
 import sql file to postgres
-psql -d whiskeyrocks -U username -f db.sql
+psql -d whiskeyrocks -U postgres -f db.sql
