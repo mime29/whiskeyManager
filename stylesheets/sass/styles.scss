@@ -6,6 +6,11 @@ $custom-grid--thirds: (
     gutter: 60px,
 );
 
+$custom-grid--two: (
+    columns: 2,
+    gutter: 60px,
+);
+
 .custom-grid--thirds {
     @include grid-container;
 }
@@ -15,5 +20,10 @@ $custom-grid--thirds: (
 }
 
 .formItem {
-    display: block;
+    // display: block;
+    @include grid-container;
+}
+
+.formItem * {
+    @include grid-column(1, $custom-grid--two);
 }
