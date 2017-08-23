@@ -100,3 +100,42 @@ function addReview( reviewerId,
 doesExist("/country", ["id"], ["11"], function(exists, objectId) {
   console.log(exists);
 });
+
+// CREATE Objects
+
+function createBottleObject(name, age, vintage, caskNumber, alcoholVolume, isCollector, totalBottleCount, brandId, distilleryId, caskTypeId, caskOriginId, caskSizeId, grainTypeId) {
+  var bottleObject = {
+    bottleName: name,
+    age: age,
+    vintage: vintage,
+    caskNumber: caskNumber,
+    alcoholVolume: alcoholVolume,
+    isCollector: isCollector, 
+    totalBottleCount:totalBottleCount,
+    brandId: brandId,
+    distilleryId: distilleryId,
+    caskTypeId: caskTypeId,
+    caskOriginId: caskOriginId,
+    caskSizeId: caskSizeId,
+    grainTypeId: grainTypeId
+  }
+  return bottleObject
+}
+
+function createRadarObject( level_1, starFieldId_1,
+                            level_2, starFieldId_2,
+                            level_3, starFieldId_3,
+                            level_4, starFieldId_4,
+                            level_5, starFieldId_5,
+                            level_6, starFieldId_6) {
+
+  var reviewRadarObject = [{ level_1: level_1, starFieldId_1: starFieldId_1},
+                          { level_2: level_2, starFieldId_2: starFieldId_2},
+                          { level_3: level_3, starFieldId_3: starFieldId_3}
+                          { level_4: level_4, starFieldId_4: starFieldId_4}
+                          { level_5: level_5, starFieldId_5: starFieldId_5}
+                          { level_6: level_6, starFieldId_6: starFieldId_6}];
+
+  return reviewRadarObject;
+}
+
