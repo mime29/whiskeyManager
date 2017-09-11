@@ -1,67 +1,67 @@
 <html>
 <head>
 <script type="text/javascript" src="js/jquery.min.js"></script>
-<!-- <script type="text/javascript" src="js/everest.min.js"></script> -->
+<script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
     <title>Whiskey review</title>
     <center>Whiskey Review</center>
-	<form>
+	<form id="reviewForm">
         <section>
             <div class="formItem">
                 <label for="people">Reviewer name</label>
                 <select name="people" id="people">
-                    <option>Philippe</option>
-                    <option>Emile</option>
+                    <option value="2">Philippe</option>
+                    <option value="4">Emile</option>
                 </select>
             </div>
             <div class="formItem">
                 <label for="companyName">Company name</label>
                 <select name="companyName" id="companyName">
-                    <option>wonderful</option>
+                    <option value="5">wonderful</option>
                 </select>
             </div>
             <div class="formItem">
             <label for="brandName">Brand name</label>
     		<select id="brandName">
-                <option>Yamazaki</option>
-                <option>Hakushu</option>
-                <option>Hibiki</option>
+                <option value="8">Yamazaki</option>
+                <option value="10">Hakushu</option>
+                <option value="11">Hibiki</option>
             </select>
             </div>
             <div class="formItem">
             <label for="caskType">Cask type</label>
             <select id="caskType">
-                <option>Sherry</option>
-                <option>Bourbon</option>
+                <option value="50">Sherry</option>
+                <option value="51">Bourbon</option>
             </select>
             </div>
             <div class="formItem">
             <label for="caskOrigin">Cask origin</label>
             <select id="caskOrigin">
-                <option>America</option>
-                <option>France</option>
+                <option value="60">America</option>
+                <option value="61">France</option>
             </select>
             </div>
             <div class="formItem">
             <label for="caskSize">Cask Size</label>
             <select id="caskSize">
-                <option>HogsHead</option>
+                <option value="70">HogsHead</option>
             </select>
             </div>
             <div class="formItem">
             <label for="distillery">Distillery</label>
             <select id="distillery">
-                <option>Chichibu</option>
-                <option>Nagahama</option>
+                <option value="1">Chichibu</option>
+                <option value="7">Nagahama</option>
             </select>
             </div>
             <div class="formItem">
             <label for="grainType">Grain Type</label>
             <select id="grainType">
-                <option>Malt</option>
-                <option>Grain</option>
+                <option value="10">Malt</option>
+                <option value="11">Grain</option>
             </select>
             </div>
             <div class="formItem">
@@ -77,12 +77,12 @@
             <input type="text" name="vintage" id="vintage">
             </div>
             <div class="formItem">
-            <label for="caskNumber">Cask Number</label>
-            <input type="text" name="caskNumber" id="caskNumber">
-            </div>
-            <div class="formItem">
             <label for="alcoholVolume">Alcohol volume</label>
             <input type="text" name="alcoholVolume" id="alcoholVolume">
+            </div>
+            <div class="formItem">
+            <label for="caskNumber">Cask Number</label>
+            <input type="text" name="caskNumber" id="caskNumber">
             </div>
             <div class="formItem">
             <label for="isCollector">Collector</label>
@@ -96,13 +96,13 @@
         <section>
             <div class="formItem">
             <label for="reviewNote">Review Note</label>
-            <input type="text" name="reviewNote" id="reviewNote">
+            <textarea name="reviewNote" id="reviewNote"></textarea>
             </div>
             <div class="formItem">
             <label for="place">Place</label>
             <select name="place" id="place">
-                <option>Emile's Place</option>
-                <option>Whisky And Wine Nakameguro</option>
+                <option value="59">Emile's Place</option>
+                <option value="32">Whisky And Wine Nakameguro</option>
             </select>
             </div>
         </section>
@@ -110,57 +110,57 @@
             <div class="formItem">
             <label for="field1">Attack</label>
             <select name="field1" id="field1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
             </select>
-            <label for="field1">Strength</label>
-            <select name="field1" id="field1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
+            <label for="field2">Strength</label>
+            <select name="field2" id="field2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
             </select>
-            <label for="field1">Length</label>
-            <select name="field1" id="field1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
+            <label for="field3">Length</label>
+            <select name="field3" id="field3">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
             </select>
-            <label for="field1">Sweetness</label>
-            <select name="field1" id="field1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
+            <label for="field4">Sweetness</label>
+            <select name="field4" id="field4">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
             </select>
-            <label for="field1">Depth</label>
-            <select name="field1" id="field1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
+            <label for="field5">Depth</label>
+            <select name="field5" id="field5">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
             </select>
-            <label for="field1">Complexity</label>
-            <select name="field1" id="field1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
+            <label for="field6">Complexity</label>
+            <select name="field6" id="field6">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
             </select>
             </div>
         </section>

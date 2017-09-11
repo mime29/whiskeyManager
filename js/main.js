@@ -84,8 +84,7 @@ function addReview( reviewerId,
                     placeId, 
                     bottleObject,
                     reviewRadarObject,
-                    reviewNote,
-                    reviewContent,
+                    reviewNote
                     ) {
   //Create bottle
   getBottleId(bottleObject, function(bottleId) {
@@ -131,9 +130,9 @@ function createRadarObject( level_1, starFieldId_1,
 
   var reviewRadarObject = [{ level_1: level_1, starFieldId_1: starFieldId_1},
                           { level_2: level_2, starFieldId_2: starFieldId_2},
-                          { level_3: level_3, starFieldId_3: starFieldId_3}
-                          { level_4: level_4, starFieldId_4: starFieldId_4}
-                          { level_5: level_5, starFieldId_5: starFieldId_5}
+                          { level_3: level_3, starFieldId_3: starFieldId_3},
+                          { level_4: level_4, starFieldId_4: starFieldId_4},
+                          { level_5: level_5, starFieldId_5: starFieldId_5},
                           { level_6: level_6, starFieldId_6: starFieldId_6}];
 
   return reviewRadarObject;
