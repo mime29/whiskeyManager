@@ -7,7 +7,7 @@ function getItems(endpoint, completion) {
 }
 
 function textCompletionFor(endpoint, field, text, completion) {
-  $.when($.getJSON(serverAddr + endpoint + field + "=eq." + text)).then(function (data, response, jqXHR) {
+  $.when($.getJSON(serverAddr + endpoint + "?" + field + "=eq." + text)).then(function (data, response, jqXHR) {
     if (date.length > 0) {
       completion(data[0]);
     } else {
@@ -94,12 +94,6 @@ function addReview( reviewerId,
   })
 }
 
-//EXECUTE
-
-doesExist("/country", ["id"], ["11"], function(exists, objectId) {
-  console.log(exists);
-});
-
 // CREATE Objects
 
 function createBottleObject(name, age, vintage, caskNumber, alcoholVolume, isCollector, totalBottleCount, brandId, distilleryId, caskTypeId, caskOriginId, caskSizeId, grainTypeId) {
@@ -136,5 +130,62 @@ function createRadarObject( level_1, starFieldId_1,
                           { level_6: level_6, starFieldId_6: starFieldId_6}];
 
   return reviewRadarObject;
+}
+
+//Function used to pre-fill the form
+function getSelectItems(selectId, completion) {
+  var endpoint = ''
+  var valueName = ''
+  switch(selectId){
+    case 'people':
+      endpoint = 'people';
+      valueName = 'name';
+      break;
+    case 'companyName':
+      endpoint = 'company';
+      valueName = 'name';
+      break;
+    case 'brandName':
+      endpoint = 'brand';
+      valueName = 'name';
+      break;
+    case 'caskType':
+      endpoint = 'cask_types';
+      valueName = 'type';
+      break;
+    case 'caskOrigin':
+      endpoint = 'cask_origin';
+      valueName = 'country';
+      break;
+    case 'caskSize':
+      endpoint = 'cask_size';
+      valueName = 'denomination';
+      break;
+    case 'distillery':
+      endpoint = 'distillery';
+      valueName = 'address';
+      break
+    case 'grainType':
+      endpoint = 'grain_type';
+      valueName = 'name';
+      break;
+    case 'place':
+      endpoint = 'place';
+      valueName = 'name';
+      break;
+    default:
+      console.log("selectID " + selectId + " not recognized. check your code");
+      return;
+  }
+
+  $.when($.getJSON(serverAddr + "/" + endpoint).then(function (data, response, jqXHR) {
+      var items = data.map(function (item) {
+        var retItem = new Object;
+        retItem.value = item["id"];
+        retItem.text = item[valueName];
+        return retItem;
+      });
+      completion(items);
+  }));
 }
 

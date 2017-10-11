@@ -1,3 +1,8 @@
+$(document).ready(function () {
+    //Starts when document is loaded
+    prefillAllSelects();
+});
+
 //Used to handle user interactions on the HTML
 jQuery(document).ready(function(){
   jQuery('#reviewForm').on('submit', function(e){
@@ -87,3 +92,26 @@ function checkMissingFields() {
     return true;
 }
 
+function prefillAllSelects() {
+    prefillOptionsInSelect('people');
+    prefillOptionsInSelect('companyName');
+    prefillOptionsInSelect('brandName');
+    prefillOptionsInSelect('caskType');
+    prefillOptionsInSelect('caskOrigin');
+    prefillOptionsInSelect('caskSize');
+    prefillOptionsInSelect('distillery');
+    prefillOptionsInSelect('grainType');
+    prefillOptionsInSelect('place');
+}
+
+function prefillOptionsInSelect(selectId) {
+    var selectObj = $('#' + selectId)
+    getSelectItems(selectId, function(items) {
+        $.each(items, function (i, item) {
+            selectObj.append($('<option>', { 
+                value: item.value,
+                text : item.text 
+            }));
+        });
+    });
+}
