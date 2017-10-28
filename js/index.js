@@ -1,6 +1,8 @@
 $(document).ready(function () {
     //Starts when document is loaded
     prefillAllSelects();
+    //Temporary
+    drawChart();
 });
 
 //Used to handle user interactions on the HTML
@@ -13,6 +15,7 @@ jQuery(document).ready(function(){
 
 
 function formSubmitted() {
+    $("#submitId").attr("disabled", true); //Disable submit button
     var canSubmit = checkMissingFields();
 
     if (canSubmit) {
@@ -74,6 +77,8 @@ function formSubmitted() {
                                          field6, "6");
 
         addReview(reviewerId, placeId, einBottle, einRadar, reviewNote);
+    } else {
+        $("#submitId").attr("disabled", false); //Disable submit button
     }
 
 }

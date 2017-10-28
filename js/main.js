@@ -90,6 +90,7 @@ function addReview( reviewerId,
   getBottleId(bottleObject, function(bottleId) {
       createReview(reviewerId, placeId, bottleId, reviewRadarId, reviewNote, function(newReview) {
         console.log("new review created:" + newReview)
+        
       })
   })
 }
